@@ -16,6 +16,10 @@ console.log('It is working.'))
 
 app.use(express.json())
 
+app.get('/api/inventory/', controller.getAll)
+app.get('/api/product/:id', controller.getOne)
+app.post('/api/product/', controller.addProduct)
+app.delete('/api/product/:id', controller.deleteProduct)
 
 
 app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} is running like wild horses in heat.`));

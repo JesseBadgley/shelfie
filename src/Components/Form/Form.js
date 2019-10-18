@@ -13,6 +13,7 @@ export default class Form extends Component {
         }
     }
 
+    
     handleNameChange(e) {
         this.setState({name: e.target.value})
         console.log(`${this.state.name}`)
