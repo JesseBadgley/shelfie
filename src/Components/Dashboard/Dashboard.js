@@ -6,6 +6,10 @@ import axios from 'axios';
 export default class Dashboard extends Component {
     constructor() {
         super ();
+        this.state = {
+            list: ['apples'],
+           
+        }
     }
 
 
