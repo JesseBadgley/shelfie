@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import axios from 'axios'
+
+export default function Header{
 
 
-export default class Header extends Component {
-    constructor() {
-        super ();
-    }
-
-
-    render() {
-        return(
-            <div>
-                Header
-            </div>
-        )
-    }
-
+    return (
+        <div >
+            Header
+        </div>
+    )
 
 }

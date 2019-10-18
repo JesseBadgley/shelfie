@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import axios from 'axios'
 
@@ -15,7 +14,8 @@ render() {
             <h2>{this.props.product.name}</h2>
             <h4>${this.props.product.price}</h4>
             </div>
-            
+            {/* <h1>{this.props.product.id}</h1> */}
+            {/* <button onClick={()=>this.props.deleteProduct(this.props.product.product_id)}>Delete</button> */}
         </div>
     )
 }

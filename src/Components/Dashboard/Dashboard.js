@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Product from '../Product/Product'
 
+
 export default class Dashboard extends Component {
     constructor() {
         super();
         this.state = {
-            list: ['test'],
+            list: [],
             selectedProduct: ['none'],
         }
-       
+      
         this.refresh = this.refreshInventory.bind(this)
     }
     componentDidMount() {
@@ -35,15 +36,17 @@ export default class Dashboard extends Component {
 
     render() {
         return (
-            <div>
+            <div className='Dashboard'>
                 {this.state.list.map((el, index) => (
-                    <div key={index + 'div'}>
+                    <div className='single1'
+                        key={index + 'div'}>
                         <Product
                             refreshInventory={this.props.refreshInventory}
                             key={index}
                             product={el}
                             deleteProduct={this.deleteProduct} />
                         <button key={index + 'button'} onClick={() => this.deleteProduct(el.product_id)}>Delete</button>
+                      
                         
                     </div>
                 ))}
